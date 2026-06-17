@@ -41,7 +41,7 @@ npx skills@latest add mattpocock/skills
 
 ## Install via the Claude Code Marketplace
 
-These skills are also published as a [Claude Code plugin marketplace](https://docs.claude.com/en/docs/claude-code/plugins). To install them directly inside Claude Code:
+These skills are also published as a [Claude Code plugin marketplace](https://docs.claude.com/en/docs/claude-code/plugins). Every skill is its own plugin, so you can install just the ones you want.
 
 1. Add this repo as a marketplace:
 
@@ -49,19 +49,21 @@ These skills are also published as a [Claude Code plugin marketplace](https://do
 /plugin marketplace add mattpocock/skills
 ```
 
-2. Install the plugin (this gives you every skill in the repo):
+2. Install a single skill by name. For example, to install only `teach`:
+
+```bash
+/plugin install teach@mattpocock-skills
+```
+
+   Swap `teach` for any skill name (`grill-me`, `tdd`, `triage`, `diagnosing-bugs`, …) to install just that one.
+
+3. Or grab everything at once with the aggregate plugin:
 
 ```bash
 /plugin install mattpocock-skills@mattpocock-skills
 ```
 
-3. Restart Claude Code when prompted, and the skills become available as slash commands (for example `/teach`).
-
-Once installed, you can invoke a specific skill directly. For example, to start a stateful teaching session, run:
-
-```bash
-/teach
-```
+4. Restart Claude Code when prompted, and each installed skill becomes available as a slash command (for example `/teach`).
 
 ## Why These Skills Exist
 
